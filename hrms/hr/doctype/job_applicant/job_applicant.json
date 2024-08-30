@@ -15,10 +15,32 @@
   "email_id",
   "phone_number",
   "country",
+  "linkedin_profile_link",
+  "currently_employed",
+  "leave",
   "column_break_3",
   "job_title",
   "designation",
   "status",
+  "address_section",
+  "residence_city",
+  "column_break_fqnm",
+  "residence_subcity",
+  "column_break_juzm",
+  "residence_area",
+  "education_details_section",
+  "degree_type",
+  "column_break_ipff",
+  "university_name",
+  "column_break_czrv",
+  "subject_learned",
+  "column_break_jyzg",
+  "graduation_date",
+  "column_break_htxo",
+  "gpa",
+  "important_questions_section",
+  "important_question_1",
+  "important_question_2",
   "source_and_rating_section",
   "source",
   "source_name",
@@ -188,13 +210,121 @@
    "fieldtype": "Link",
    "label": "Designation",
    "options": "Designation"
+  },
+  {
+   "fieldname": "linkedin_profile_link",
+   "fieldtype": "Data",
+   "label": "Linkedin Profile Link",
+   "options": "URL"
+  },
+  {
+   "fieldname": "currently_employed",
+   "fieldtype": "Select",
+   "label": "Currently Employed",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "residence_city",
+   "fieldtype": "Data",
+   "label": "Residence City"
+  },
+  {
+   "fieldname": "column_break_fqnm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "residence_subcity",
+   "fieldtype": "Data",
+   "label": "Residence Subcity"
+  },
+  {
+   "fieldname": "column_break_juzm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "residence_area",
+   "fieldtype": "Data",
+   "label": "Residence Area"
+  },
+  {
+   "fieldname": "education_details_section",
+   "fieldtype": "Section Break",
+   "label": "Education Details"
+  },
+  {
+   "fieldname": "degree_type",
+   "fieldtype": "Select",
+   "label": "Degree Type",
+   "options": "\nDiploma\nBachelors\nMasters"
+  },
+  {
+   "fieldname": "column_break_ipff",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "university_name",
+   "fieldtype": "Data",
+   "label": "University name"
+  },
+  {
+   "fieldname": "column_break_czrv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subject_learned",
+   "fieldtype": "Data",
+   "label": "Subject Learned"
+  },
+  {
+   "fieldname": "column_break_jyzg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "graduation_date",
+   "fieldtype": "Date",
+   "label": "Graduation date"
+  },
+  {
+   "fieldname": "column_break_htxo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gpa",
+   "fieldtype": "Float",
+   "label": "GPA"
+  },
+  {
+   "fieldname": "important_questions_section",
+   "fieldtype": "Section Break",
+   "label": "Important Questions"
+  },
+  {
+   "fieldname": "important_question_1",
+   "fieldtype": "Small Text",
+   "label": "Describe how your education has prepared you for this career?"
+  },
+  {
+   "fieldname": "important_question_2",
+   "fieldtype": "Small Text",
+   "label": "Why should we hire you? What can you contribute to the company? How does it match/align with your long-term goals?"
+  },
+  {
+   "depends_on": "eval:doc.currently_employed == \"Yes\"",
+   "fieldname": "leave",
+   "fieldtype": "Small Text",
+   "label": "Why do you want to leave your current job?"
   }
  ],
  "icon": "fa fa-user",
  "idx": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-14 17:03:48.838409",
+ "modified": "2024-05-31 02:43:23.297841",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Job Applicant",
