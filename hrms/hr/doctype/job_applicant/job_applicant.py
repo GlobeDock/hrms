@@ -41,6 +41,19 @@ class JobApplicant(Document):
 			guess = self.email_id.split("@")[0]
 			self.applicant_name = " ".join([p.capitalize() for p in guess.split(".")])
 
+		self.check_for_zero_values()
+
+	def check_for_zero_values (self):
+		if self.lower_range <= 0:
+			frappe.throw ("Lower range can not be 0 or negative")
+
+		if self.upper_range <= 0:
+			frappe.throw ("Upper range can not be 0 or negative")
+
+		if (self.degree_type):
+			if self.gpa <= 0:
+				frappe.throw ("GPA range can not be 0 or negative")
+
 	def before_insert(self):
 		if self.job_title:
 			job_opening_status = frappe.db.get_value("Job Opening", self.job_title, "status")
